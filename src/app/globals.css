@@ -1,0 +1,125 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+  /* Demon Slayer Color Palette */
+  --background: #0f1419;
+  --foreground: #e2e8f0;
+  --primary: #ff6b35; /* Flame orange */
+  --secondary: #4fb3d9; /* Water blue */
+  --accent: #6366f1; /* Purple/indigo */
+  --muted: #64748b;
+  --border: #334155;
+  
+  /* Breathing technique colors */
+  --flame-start: #ff6b35;
+  --flame-end: #fbbf24;
+  --water-start: #06b6d4;
+  --water-end: #3b82f6;
+  --thunder-start: #eab308;
+  --thunder-end: #f59e0b;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --color-accent: var(--accent);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+  --font-sans: Inter, var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --font-japanese: 'Noto Sans JP', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Demon Slayer inspired animations */
+@keyframes flameBreath {
+  0%, 100% { 
+    background-position: 0% 50%; 
+    filter: hue-rotate(0deg);
+  }
+  50% { 
+    background-position: 100% 50%; 
+    filter: hue-rotate(20deg);
+  }
+}
+
+@keyframes waterFlow {
+  0% { transform: translateX(-100%); opacity: 0; }
+  50% { opacity: 1; }
+  100% { transform: translateX(100%); opacity: 0; }
+}
+
+@keyframes thunderStrike {
+  0%, 90%, 100% { opacity: 0; }
+  5%, 10% { opacity: 1; }
+}
+
+@keyframes swordSlash {
+  0% { transform: translateX(-100%) rotate(-45deg); opacity: 0; }
+  50% { opacity: 1; }
+  100% { transform: translateX(100%) rotate(-45deg); opacity: 0; }
+}
+
+@keyframes breathingGlow {
+  0%, 100% { 
+    box-shadow: 0 0 20px rgba(255, 107, 53, 0.3);
+  }
+  50% { 
+    box-shadow: 0 0 40px rgba(255, 107, 53, 0.6), 
+                0 0 60px rgba(255, 107, 53, 0.4);
+  }
+}
+
+/* Utility classes for animations */
+.flame-gradient {
+  background: linear-gradient(45deg, var(--flame-start), var(--flame-end));
+  background-size: 200% 200%;
+  animation: flameBreath 3s ease-in-out infinite;
+}
+
+.water-gradient {
+  background: linear-gradient(45deg, var(--water-start), var(--water-end));
+}
+
+.breathing-glow {
+  animation: breathingGlow 2s ease-in-out infinite;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--flame-end);
+}
+
+/* Selection styles */
+::selection {
+  background: var(--primary);
+  color: white;
+}
