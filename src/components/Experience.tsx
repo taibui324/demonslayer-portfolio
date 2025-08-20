@@ -1,71 +1,111 @@
 const experiences = [
   {
     period: "2024 — Present",
-    title: "Hashira Level",
-    position: "Senior Fullstack Architect",
-    company: "Tech Innovations Corp",
-    description: "Leading the development of next-generation AI-powered applications and scalable web solutions. Mentoring junior developers in advanced breathing techniques (development methodologies) and spearheading the adoption of cutting-edge technologies across the organization.",
+    title: "Water Hashira Level",
+    position: "Senior Software Engineer",
+    company: "ANZ - Knowledgebase & Data Team",
+    description: "Leading 15 engineers across 3 cross-functional teams building advanced multi-agent chatbot systems leveraging GPT-4, Claude, LangChain, and Pinecone. Architecting enterprise-grade AI solutions that process millions of documents daily with the precision of Water Breathing.",
     technologies: [
-      "React", "Next.js", "TypeScript", "Python", "AI/ML", "AWS", "Docker", "GraphQL"
+      "GPT-4", "Claude", "LangChain", "Pinecone", "Python", "AWS", "OpenSearch", "RAG"
     ],
     achievements: [
-      "Architected AI-powered recommendation system serving 1M+ users",
-      "Led team of 8 developers in building enterprise-grade applications",
-      "Reduced deployment time by 75% through automation and CI/CD optimization"
+      "Led 15 engineers across 3 cross-functional teams building AI chatbot systems",
+      "Improved data accuracy by 35% and reduced ingestion latency by 40%",
+      "Saved $100K+ annually through optimized OpenSearch cluster consolidation",
+      "Increased chatbot adoption rates by 28% with RAG Stream Mode implementation",
+      "Drove 15% uplift in enterprise product upsell revenue"
     ]
   },
   {
-    period: "2022 — 2024",
+    period: "July 2022 — January 2024",
     title: "Kinoe Rank",
-    position: "Lead Software Engineer",
-    company: "Digital Solutions Ltd",
-    description: "Mastered advanced development techniques while leading cross-functional teams in building robust software solutions. Specialized in full-stack development with a focus on performance optimization and user experience enhancement.",
+    position: "Solutions Architect",
+    company: "ZOI - IoT Professional Platform",
+    description: "Designed and scaled IoT microservices platform integrating device sensors, gateways, and SaaS APIs. Led cross-team architectural alignment across distributed engineering teams in Germany and Vietnam.",
     technologies: [
-      "Vue.js", "Node.js", "PostgreSQL", "Redis", "Kubernetes", "Jenkins", "Terraform"
+      "Node.js", "Microservices", "IoT", "AWS", "Terraform", "Prometheus", "Grafana"
     ],
     achievements: [
-      "Built microservices architecture handling 100K+ daily transactions",
-      "Improved application performance by 60% through code optimization",
-      "Established development best practices and code review standards"
+      "Improved data ingestion and device provisioning efficiency by 50%",
+      "Reduced integration blockers by 30% across distributed teams",
+      "Improved operational efficiency by 40% for Clean Energy Solution Fleet Management",
+      "Cut incident response time by 25% with observability tooling",
+      "Reduced provisioning time by 50% and lowered infra spend by 15%"
     ]
   },
   {
-    period: "2020 — 2022",
+    period: "May 2020 — September 2023",
     title: "Hinoto Rank",
-    position: "Full Stack Developer",
-    company: "StartupForge Inc",
-    description: "Developed comprehensive web applications from concept to deployment. Gained expertise in multiple technology stacks while working in a fast-paced startup environment. Learned the fundamentals of breathing techniques for scalable software development.",
+    position: "Lead Engineer/Co-founder",
+    company: "On The Card",
+    description: "Co-founded and led a team of 7 engineers, defining tech roadmap and engineering processes to scale a contactless smart card platform. Mastered the art of handling massive traffic spikes with Water Breathing techniques.",
     technologies: [
-      "JavaScript", "Express.js", "MongoDB", "MySQL", "HTML/CSS", "Bootstrap"
+      "Node.js", "Firebase", "MongoDB", "React", "CI/CD", "Grafana", "PagerDuty"
     ],
     achievements: [
-      "Developed MVP that secured $2M Series A funding",
-      "Built responsive web applications with 99.9% uptime",
-      "Collaborated with design team to implement pixel-perfect UIs"
+      "Handled 10,000+ orders/min during peak sales with zero downtime",
+      "Engineered backend services supporting 8,000+ NFC card sales in 5 minutes",
+      "Maintained >99.9% availability during peak campaigns",
+      "Reduced deployment errors by 20% and MTTR by 40%",
+      "Improved team productivity by 30% through culture and process improvements"
     ]
   },
   {
-    period: "2019 — 2020",
-    title: "Mizunoto Rank",
-    position: "Junior Software Developer",
-    company: "CodeCraft Studios",
-    description: "Began my journey as a demon slayer developer, learning the foundational breathing techniques of software development. Focused on front-end development while gradually expanding into full-stack capabilities.",
+    period: "January 2022 — July 2022",
+    title: "Hinoto Rank",
+    position: "Senior Software Engineer",
+    company: "Construct-X - Borneo Team",
+    description: "Designed and developed ETL pipelines with Airflow, Kafka, and Python. Built data-driven insights dashboards that improved executive decision-making speed by 25%.",
     technologies: [
-      "HTML", "CSS", "JavaScript", "jQuery", "PHP", "WordPress"
+      "Python", "Django", "Airflow", "Kafka", "React", "GraphQL", "Jenkins", "GCP"
     ],
     achievements: [
-      "Contributed to 15+ client projects with 100% on-time delivery",
-      "Learned rapid prototyping and agile development methodologies",
-      "Built first AI chatbot integration for customer support"
+      "Improved data availability by 30% with real-time ETL pipelines",
+      "Reduced load times by 60% for single-page applications",
+      "Cut deployment times by 70% through infrastructure automation",
+      "Enhanced executive decision-making speed by 25%"
+    ]
+  },
+  {
+    period: "January 2021 — March 2022",
+    title: "Mizunoto Rank",
+    position: "Full Stack Software Engineer",
+    company: "Hello Health Group",
+    description: "Revamped healthcare applications serving 120,000+ unique visitors monthly. Developed health tools for diabetes and COVID-19 monitoring with the precision of Water Breathing forms.",
+    technologies: [
+      "React", "Next.js", "NestJS", "Redis", "Webpack", "Styled Components"
+    ],
+    achievements: [
+      "Boosted user engagement by 35% for 120,000+ monthly visitors",
+      "Launched health tools apps for type 1 diabetes and COVID-19",
+      "Enhanced system performance and reliability with Redis caching",
+      "Improved response times for critical tasks by 45%"
+    ]
+  },
+  {
+    period: "February 2017 — October 2020",
+    title: "Kanoto Rank",
+    position: "Software Engineer",
+    company: "ForcePoint",
+    description: "Contributed to ForceSight main product across frontend UI and backend APIs. Began mastering the foundational breathing techniques of enterprise software development.",
+    technologies: [
+      "React", "React Native", "Node.js", "Python", "Microservices"
+    ],
+    achievements: [
+      "Improved customer onboarding satisfaction by 22%",
+      "Enhanced system scalability and reduced incident frequency by 15%",
+      "Increased automated test coverage from 20% to 90%",
+      "Enabled secure data visualization for enterprise clients"
     ]
   }
 ];
 
 const rankColors = {
-  "Hashira Level": "from-orange-400 to-red-500",
-  "Kinoe Rank": "from-blue-400 to-cyan-500", 
-  "Hinoto Rank": "from-green-400 to-emerald-500",
-  "Mizunoto Rank": "from-purple-400 to-indigo-500"
+  "Water Hashira Level": "from-blue-400 to-cyan-500",
+  "Kinoe Rank": "from-green-400 to-emerald-500", 
+  "Hinoto Rank": "from-orange-400 to-red-500",
+  "Mizunoto Rank": "from-purple-400 to-indigo-500",
+  "Kanoto Rank": "from-yellow-400 to-orange-500"
 };
 
 export default function Experience() {

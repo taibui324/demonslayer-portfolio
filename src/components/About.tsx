@@ -14,60 +14,60 @@ export default function About() {
 
       <div className="space-y-4">
         <p className="text-base leading-relaxed">
-          I&apos;m a passionate developer who crafts{" "}
-          <span className="font-medium text-primary">accessible, pixel-perfect digital solutions</span>{" "}
-          that blend thoughtful design with robust engineering. Like a demon slayer mastering various breathing techniques, 
-          I specialize in multiple technology stacks to deliver{" "}
-          <span className="font-medium text-secondary">powerful software and AI solutions</span>.
+          I&apos;m a senior software engineer who architects{" "}
+          <span className="font-medium text-secondary">enterprise-scale AI solutions</span>{" "}
+          that flow through complex systems with the precision of Water Breathing. Like Giyu Tomioka mastering his techniques, 
+          I specialize in leading engineering teams to deliver{" "}
+          <span className="font-medium text-primary">scalable, intelligent software platforms</span>.
         </p>
 
         <p className="text-base leading-relaxed">
-          Currently wielding my skills as a{" "}
-          <span className="font-medium text-accent">Fullstack Software Architect</span>, 
-          I focus on building scalable web applications, intelligent AI systems, and seamless user experiences. 
-          My expertise spans across modern frameworks like React, Next.js, and TypeScript, while my AI breathing 
-          techniques include machine learning, natural language processing, and automation solutions.
+          Currently serving as a{" "}
+          <span className="font-medium text-accent">Senior Software Engineer at ANZ</span>, 
+          I lead 15 engineers across 3 cross-functional teams building advanced multi-agent chatbot systems with GPT-4, Claude, and LangChain. 
+          My expertise flows through AI/ML, cloud architecture, and full-stack development, processing millions of documents daily 
+          with the calm efficiency of a Water Hashira.
         </p>
 
         <p className="text-base leading-relaxed">
-          In my journey as a developer, I&apos;ve had the opportunity to work across various domains — from{" "}
+          Throughout my journey, I&apos;ve mastered diverse domains — from{" "}
           <span className="font-medium text-primary hover:text-orange-400 transition-colors cursor-pointer">
-            e-commerce platforms
+            banking & fintech platforms
           </span>{" "}
           and{" "}
           <span className="font-medium text-secondary hover:text-blue-400 transition-colors cursor-pointer">
-            enterprise applications
+            IoT microservices architecture
           </span>{" "}
           to{" "}
           <span className="font-medium text-accent hover:text-purple-400 transition-colors cursor-pointer">
-            AI-powered startups
+            healthcare applications
           </span>{" "}
-          and cutting-edge research projects. I believe in writing clean, maintainable code that not only 
-          functions flawlessly but also tells a story.
+          and enterprise security solutions. I believe in architecting systems that not only 
+          scale gracefully but flow with the natural precision of water.
         </p>
 
         <p className="text-base leading-relaxed">
-          When I&apos;m not slaying bugs or training new AI models, you&apos;ll find me exploring the latest 
-          in web technologies, contributing to open-source projects, or sharing knowledge through 
-          technical writing and mentorship. I&apos;m always eager to take on new challenges and 
-          collaborate with fellow developers to create something extraordinary.
+          When I&apos;m not architecting AI systems or mentoring engineering teams, you&apos;ll find me exploring 
+          cutting-edge cloud technologies, contributing to open-source projects, or earning new certifications 
+          (AWS, GCP, Azure). With multiple professional certifications and a B.Sc. in Computer Science from George Mason University, 
+          I&apos;m always ready to take on new challenges that require the calm determination of a Water Hashira.
         </p>
 
         {/* Core values */}
         <div className="mt-8 grid gap-4 sm:grid-cols-2">
-          <div className="rounded-lg border border-border bg-background/50 p-4 transition-all hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10">
-            <h3 className="font-semibold text-primary mb-2">🔥 Flame Breathing</h3>
-            <p className="text-sm text-muted">
-              Passionate about creating blazingly fast, responsive web applications that provide 
-              exceptional user experiences.
-            </p>
-          </div>
-          
           <div className="rounded-lg border border-border bg-background/50 p-4 transition-all hover:border-secondary/50 hover:shadow-lg hover:shadow-secondary/10">
             <h3 className="font-semibold text-secondary mb-2">🌊 Water Breathing</h3>
             <p className="text-sm text-muted">
-              Fluid adaptation to new technologies and methodologies, ensuring solutions 
-              that flow seamlessly with business requirements.
+              Leading teams with calm precision, architecting AI solutions that flow seamlessly 
+              through enterprise systems, processing millions of documents with grace.
+            </p>
+          </div>
+          
+          <div className="rounded-lg border border-border bg-background/50 p-4 transition-all hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10">
+            <h3 className="font-semibold text-primary mb-2">⚡ Thunder Breathing</h3>
+            <p className="text-sm text-muted">
+              Swift deployment of cloud infrastructure and DevOps solutions, cutting deployment 
+              times by 70% and reducing operational overhead with lightning efficiency.
             </p>
           </div>
         </div>

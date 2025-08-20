@@ -5,6 +5,8 @@ import Experience from "@/components/Experience";
 import Projects from "@/components/Projects";
 import Skills from "@/components/Skills";
 import Contact from "@/components/Contact";
+import BackgroundMusic from "@/components/BackgroundMusic";
+import GiyuCharacter from "@/components/GiyuCharacter";
 
 export default function Home() {
   return (
@@ -13,6 +15,12 @@ export default function Home() {
       <div className="pointer-events-none fixed inset-0 z-30 transition duration-300 lg:absolute">
         <div className="absolute inset-0 bg-gradient-radial from-primary/15 via-transparent to-transparent opacity-50 blur-3xl" />
       </div>
+      
+      {/* Giyu Tomioka Character */}
+      <GiyuCharacter />
+      
+      {/* Background Music Player */}
+      <BackgroundMusic />
       
       <div className="mx-auto min-h-screen max-w-screen-xl px-6 py-12 font-sans md:px-12 md:py-16 lg:py-0">
         <Navigation />

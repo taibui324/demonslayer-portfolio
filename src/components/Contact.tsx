@@ -161,10 +161,10 @@ export default function Contact() {
                   <div>
                     <p className="font-medium text-foreground">Email</p>
                     <a 
-                      href="mailto:demon.slayer.dev@example.com" 
+                      href="mailto:taibui324@gmail.com" 
                       className="text-muted hover:text-primary transition-colors"
                     >
-                      demon.slayer.dev@example.com
+                      taibui324@gmail.com
                     </a>
                   </div>
                 </div>
@@ -181,12 +181,12 @@ export default function Contact() {
                   <div>
                     <p className="font-medium text-foreground">LinkedIn</p>
                     <a 
-                      href="https://linkedin.com/in/demon-slayer-dev" 
+                      href="https://www.linkedin.com/in/tai-bui-7098a2209/" 
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-muted hover:text-secondary transition-colors"
                     >
-                      /in/demon-slayer-dev
+                      /in/tai-bui-7098a2209/
                     </a>
                   </div>
                 </div>
@@ -203,12 +203,12 @@ export default function Contact() {
                   <div>
                     <p className="font-medium text-foreground">GitHub</p>
                     <a 
-                      href="https://github.com/demon-slayer-dev" 
+                      href="https://github.com/taibui324" 
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-muted hover:text-accent transition-colors"
                     >
-                      @demon-slayer-dev
+                      @taibui324
                     </a>
                   </div>
                 </div>

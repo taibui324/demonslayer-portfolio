@@ -1,51 +1,51 @@
 const projects = [
   {
-    title: "AI-Powered Breathing Assistant",
-    description: "Intelligent web application that uses machine learning to analyze and optimize breathing patterns for meditation and stress relief. Features real-time audio analysis, personalized recommendations, and progress tracking.",
-    image: "https://images.unsplash.com/photo-1676573625792-8012c8684c96?w=400&h=225&fit=crop&crop=smart",
-    technologies: ["React", "TensorFlow.js", "Node.js", "WebRTC", "MongoDB"],
+    title: "ANZ Multi-Agent Chatbot Platform",
+    description: "Enterprise-grade AI chatbot system processing millions of documents daily. Built with GPT-4, Claude, LangChain, and Pinecone, featuring RAG Stream Mode for real-time retrieval and 28% increased adoption rates across banking operations.",
+    image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=400&h=225&fit=crop&crop=smart",
+    technologies: ["GPT-4", "Claude", "LangChain", "Pinecone", "Python", "AWS", "OpenSearch"],
     liveUrl: "#",
     githubUrl: "#",
     featured: true,
     category: "AI/ML"
   },
   {
-    title: "Demon Slayer Task Management",
-    description: "Modern project management platform inspired by demon slayer ranks and breathing techniques. Features include team collaboration, progress tracking with rank-based gamification, and deadline management with breathing technique reminders.",
-    image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=400&h=225&fit=crop&crop=smart", 
-    technologies: ["Next.js", "TypeScript", "Prisma", "PostgreSQL", "Tailwind CSS"],
+    title: "ZOI IoT Microservices Platform",
+    description: "Scalable IoT platform integrating device sensors, gateways, and SaaS APIs. Led cross-team architecture across Germany and Vietnam, improving data ingestion efficiency by 50% and operational efficiency by 40% for Clean Energy Fleet Management.",
+    image: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=400&h=225&fit=crop&crop=smart", 
+    technologies: ["Node.js", "Microservices", "AWS", "Terraform", "Prometheus", "Grafana"],
     liveUrl: "#",
     githubUrl: "#",
     featured: true,
-    category: "Web App"
+    category: "IoT Platform"
   },
   {
-    title: "Blade Commerce Platform",
-    description: "High-performance e-commerce solution with advanced inventory management, real-time analytics, and AI-powered product recommendations. Built for scalability and optimized for conversion.",
+    title: "On The Card - Contactless Smart Card Platform",
+    description: "Co-founded fintech startup handling 10,000+ orders/min during peak sales. Engineered backend services supporting 8,000+ NFC card sales in 5 minutes with zero downtime, maintaining >99.9% availability.",
     image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=400&h=225&fit=crop&crop=smart",
-    technologies: ["Vue.js", "Express.js", "Redis", "Stripe API", "AWS S3"],
+    technologies: ["Node.js", "Firebase", "MongoDB", "React", "CI/CD", "Grafana"],
     liveUrl: "#",
     githubUrl: "#",
     featured: true,
-    category: "E-commerce"
+    category: "Fintech"
   },
   {
-    title: "Thunder Breathing API",
-    description: "Lightning-fast GraphQL API service for real-time data processing and distribution. Handles high-throughput operations with intelligent caching and load balancing.",
-    image: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=400&h=225&fit=crop&crop=smart",
-    technologies: ["GraphQL", "Apollo Server", "Docker", "Kubernetes", "Microservices"],
+    title: "Hello Health Group - Healthcare Platform",
+    description: "Revamped healthcare applications serving 120,000+ unique visitors monthly. Developed health tools for type 1 diabetes and COVID-19 monitoring, boosting user engagement by 35% with improved response times.",
+    image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=400&h=225&fit=crop&crop=smart",
+    technologies: ["React", "Next.js", "NestJS", "Redis", "Webpack", "Styled Components"],
     liveUrl: "#",
     githubUrl: "#",
     featured: false,
-    category: "Backend"
+    category: "Healthcare"
   }
 ];
 
 const categoryColors = {
   "AI/ML": "from-purple-400 to-indigo-500",
-  "Web App": "from-orange-400 to-red-500",
-  "E-commerce": "from-green-400 to-emerald-500", 
-  "Backend": "from-blue-400 to-cyan-500"
+  "IoT Platform": "from-green-400 to-emerald-500",
+  "Fintech": "from-orange-400 to-red-500", 
+  "Healthcare": "from-blue-400 to-cyan-500"
 };
 
 export default function Projects() {
