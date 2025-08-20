@@ -7,6 +7,7 @@ import Skills from "@/components/Skills";
 import Contact from "@/components/Contact";
 import BackgroundMusic from "@/components/BackgroundMusic";
 import GiyuCharacter from "@/components/GiyuCharacter";
+import GiyuAvatar from "@/components/GiyuAvatar";
 
 export default function Home() {
   return (
@@ -18,6 +19,9 @@ export default function Home() {
       
       {/* Giyu Tomioka Character */}
       <GiyuCharacter />
+      
+      {/* Giyu Profile Avatar */}
+      <GiyuAvatar />
       
       {/* Background Music Player */}
       <BackgroundMusic />

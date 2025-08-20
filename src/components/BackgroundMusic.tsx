@@ -1,62 +1,42 @@
 "use client";
 
-import { useState, useRef, useEffect } from "react";
+import { useState, useEffect } from "react";
 
-const demonSlayerPlaylist = [
-  {
-    title: "Demon Slayer Main Theme - Kamado Tanjiro no Uta",
-    url: "https://www.soundjay.com/misc/sounds/magic-chime-02.wav", // Placeholder
-    artist: "Go Shiina, Yuki Kajiura"
-  },
-  {
-    title: "Giyu Tomioka Theme - Water Breathing",
-    url: "https://www.soundjay.com/misc/sounds/magic-chime-03.wav", // Placeholder
-    artist: "Yuki Kajiura"
-  },
-  {
-    title: "Zen Zen Zense - Opening Theme",
-    url: "https://www.soundjay.com/misc/sounds/magic-chime-04.wav", // Placeholder
-    artist: "LiSA"
-  }
-];
+const mainYouTubeVideoId = "q1iv8Ec9-TY"; // Gurenge - LiSA
 
 export default function BackgroundMusic() {
   const [isPlaying, setIsPlaying] = useState(false);
-  const [currentTrack, setCurrentTrack] = useState(0);
-  const [volume, setVolume] = useState(0.3);
   const [showControls, setShowControls] = useState(false);
-  const audioRef = useRef<HTMLAudioElement>(null);
+  const [userInteracted, setUserInteracted] = useState(false);
+  const [volume, setVolume] = useState(30);
 
+  // Auto-play music when user first interacts with the page
   useEffect(() => {
-    if (audioRef.current) {
-      audioRef.current.volume = volume;
-    }
-  }, [volume]);
+    const handleUserInteraction = () => {
+      if (!userInteracted) {
+        setUserInteracted(true);
+        // Start playing automatically after first user interaction
+        setTimeout(() => {
+          setIsPlaying(true);
+        }, 1000);
+      }
+    };
+
+    // Listen for various user interactions
+    const events = ['click', 'keydown', 'scroll', 'touchstart', 'mousemove'];
+    events.forEach(event => {
+      document.addEventListener(event, handleUserInteraction, { once: true });
+    });
+
+    return () => {
+      events.forEach(event => {
+        document.removeEventListener(event, handleUserInteraction);
+      });
+    };
+  }, [userInteracted]);
 
   const togglePlayPause = () => {
-    if (audioRef.current) {
-      if (isPlaying) {
-        audioRef.current.pause();
-      } else {
-        audioRef.current.play().catch(() => {
-          // Auto-play blocked, user needs to interact first
-          console.log("Auto-play blocked. User interaction required.");
-        });
-      }
-      setIsPlaying(!isPlaying);
-    }
-  };
-
-  const nextTrack = () => {
-    setCurrentTrack((prev) => (prev + 1) % demonSlayerPlaylist.length);
-  };
-
-  const prevTrack = () => {
-    setCurrentTrack((prev) => (prev - 1 + demonSlayerPlaylist.length) % demonSlayerPlaylist.length);
-  };
-
-  const handleTrackEnd = () => {
-    nextTrack();
+    setIsPlaying(!isPlaying);
   };
 
   return (
@@ -80,37 +60,21 @@ export default function BackgroundMusic() {
               🗾 Demon Slayer OST
             </h3>
             <p className="text-xs text-muted">
-              {demonSlayerPlaylist[currentTrack].title}
+              Gurenge - LiSA (Opening 1)
             </p>
             <p className="text-xs text-muted/70">
-              by {demonSlayerPlaylist[currentTrack].artist}
+              The main theme that plays when you visit this site
             </p>
           </div>
 
           {/* Control buttons */}
           <div className="flex items-center justify-center gap-3 mb-3">
             <button
-              onClick={prevTrack}
-              className="w-8 h-8 rounded-full bg-muted/20 hover:bg-muted/30 flex items-center justify-center transition-colors"
-              aria-label="Previous Track"
-            >
-              <span className="text-sm">⏮️</span>
-            </button>
-            
-            <button
               onClick={togglePlayPause}
               className="w-10 h-10 rounded-full bg-secondary/20 hover:bg-secondary/30 flex items-center justify-center transition-all hover:scale-105"
               aria-label={isPlaying ? "Pause" : "Play"}
             >
               <span className="text-lg">{isPlaying ? "⏸️" : "▶️"}</span>
-            </button>
-            
-            <button
-              onClick={nextTrack}
-              className="w-8 h-8 rounded-full bg-muted/20 hover:bg-muted/30 flex items-center justify-center transition-colors"
-              aria-label="Next Track"
-            >
-              <span className="text-sm">⏭️</span>
             </button>
           </div>
 
@@ -120,31 +84,34 @@ export default function BackgroundMusic() {
             <input
               type="range"
               min="0"
-              max="1"
-              step="0.1"
+              max="100"
+              step="10"
               value={volume}
-              onChange={(e) => setVolume(parseFloat(e.target.value))}
+              onChange={(e) => setVolume(parseInt(e.target.value))}
               className="w-full h-1 bg-muted/20 rounded-lg appearance-none cursor-pointer slider"
             />
           </div>
 
-          {/* Note about placeholder audio */}
-          <p className="text-xs text-muted/50 mt-2">
-            🎼 Demo mode - placeholder audio files. 
-            In production, would feature actual Demon Slayer OST.
+          {/* Auto-play notice */}
+          <p className="text-xs text-muted/70 mt-2">
+            🎼 Background music automatically starts after your first interaction with the page
           </p>
         </div>
       )}
 
-      {/* Hidden audio element */}
-      <audio
-        ref={audioRef}
-        src={demonSlayerPlaylist[currentTrack].url}
-        onEnded={handleTrackEnd}
-        onPlay={() => setIsPlaying(true)}
-        onPause={() => setIsPlaying(false)}
-        preload="metadata"
-      />
+      {/* Hidden YouTube player for background music */}
+      {userInteracted && (
+        <div className="hidden">
+          <iframe
+            width="0"
+            height="0"
+            src={`https://www.youtube.com/embed/${mainYouTubeVideoId}?autoplay=${isPlaying ? 1 : 0}&loop=1&playlist=${mainYouTubeVideoId}&controls=0&modestbranding=1&showinfo=0&rel=0&iv_load_policy=3&fs=0&cc_load_policy=0&start=0&volume=${volume}`}
+            frameBorder="0"
+            allow="autoplay; encrypted-media"
+            style={{ display: 'none' }}
+          />
+        </div>
+      )}
 
       <style jsx>{`
         .slider::-webkit-slider-thumb {
