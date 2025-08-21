@@ -4,23 +4,7 @@
   "outputDirectory": ".next",
   "installCommand": "npm install",
   "devCommand": "npm run dev",
-  "domains": [
-    "taibui-portfolio.com",
-    "www.taibui-portfolio.com"
-  ],
-  "redirects": [
-    {
-      "source": "/",
-      "has": [
-        {
-          "type": "host",
-          "value": "www.taibui-portfolio.com"
-        }
-      ],
-      "destination": "https://taibui-portfolio.com",
-      "permanent": true
-    }
-  ],
+
   "headers": [
     {
       "source": "/(.*)",

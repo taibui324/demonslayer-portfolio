@@ -6,8 +6,6 @@ import Projects from "@/components/Projects";
 import Skills from "@/components/Skills";
 import Contact from "@/components/Contact";
 import BackgroundMusic from "@/components/BackgroundMusic";
-import GiyuCharacter from "@/components/GiyuCharacter";
-import GiyuAvatar from "@/components/GiyuAvatar";
 
 export default function Home() {
   return (
@@ -16,12 +14,6 @@ export default function Home() {
       <div className="pointer-events-none fixed inset-0 z-30 transition duration-300 lg:absolute">
         <div className="absolute inset-0 bg-gradient-radial from-primary/15 via-transparent to-transparent opacity-50 blur-3xl" />
       </div>
-      
-      {/* Giyu Tomioka Character */}
-      <GiyuCharacter />
-      
-      {/* Giyu Profile Avatar */}
-      <GiyuAvatar />
       
       {/* Background Music Player */}
       <BackgroundMusic />
