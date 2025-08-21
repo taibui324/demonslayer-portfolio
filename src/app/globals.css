@@ -77,11 +77,61 @@ body {
 
 @keyframes breathingGlow {
   0%, 100% { 
-    box-shadow: 0 0 20px rgba(255, 107, 53, 0.3);
+    box-shadow: 0 0 20px rgba(79, 179, 217, 0.3);
+    filter: brightness(1) saturate(1);
   }
   50% { 
-    box-shadow: 0 0 40px rgba(255, 107, 53, 0.6), 
-                0 0 60px rgba(255, 107, 53, 0.4);
+    box-shadow: 0 0 40px rgba(79, 179, 217, 0.6), 
+                0 0 60px rgba(79, 179, 217, 0.4);
+    filter: brightness(1.1) saturate(1.2);
+  }
+}
+
+@keyframes floatUp {
+  0% {
+    transform: translateY(0) scale(0.8);
+    opacity: 0.8;
+  }
+  50% {
+    transform: translateY(-20px) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-40px) scale(1.2);
+    opacity: 0;
+  }
+}
+
+@keyframes rippleEffect {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+
+@keyframes animeGleam {
+  0%, 100% {
+    transform: translateX(-100%) skewX(-15deg);
+    opacity: 0;
+  }
+  50% {
+    transform: translateX(100%) skewX(-15deg);
+    opacity: 1;
+  }
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    filter: drop-shadow(0 0 5px rgba(79, 179, 217, 0.4)) drop-shadow(0 0 10px rgba(79, 179, 217, 0.2));
+    transform: scale(1);
+  }
+  50% {
+    filter: drop-shadow(0 0 10px rgba(79, 179, 217, 0.6)) drop-shadow(0 0 20px rgba(79, 179, 217, 0.4)) drop-shadow(0 0 30px rgba(79, 179, 217, 0.2));
+    transform: scale(1.02);
   }
 }
 
@@ -98,6 +148,44 @@ body {
 
 .breathing-glow {
   animation: breathingGlow 2s ease-in-out infinite;
+}
+
+.float-up {
+  animation: floatUp 2s ease-out infinite;
+}
+
+.ripple {
+  animation: rippleEffect 1.5s ease-out;
+}
+
+.anime-gleam {
+  animation: animeGleam 2s ease-in-out;
+}
+
+.pulse-glow {
+  animation: pulseGlow 2s ease-in-out infinite;
+}
+
+/* Animation delays */
+.animation-delay-100 {
+  animation-delay: 100ms;
+}
+
+.animation-delay-300 {
+  animation-delay: 300ms;
+}
+
+.animation-delay-500 {
+  animation-delay: 500ms;
+}
+
+.animation-delay-700 {
+  animation-delay: 700ms;
+}
+
+/* Gradient effects */
+.bg-gradient-radial {
+  background: radial-gradient(circle, var(--tw-gradient-stops));
 }
 
 /* Custom scrollbar */

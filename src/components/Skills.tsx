@@ -192,19 +192,19 @@ export default function Skills() {
           <div className="grid gap-3 sm:grid-cols-2">
             <div className="flex items-center gap-3">
               <div className="w-2 h-2 rounded-full bg-primary" />
-              <span className="text-sm">AWS Certified Solutions Architect</span>
+              <span className="text-sm">AWS Certified Solutions Architect Professional</span>
             </div>
             <div className="flex items-center gap-3">
               <div className="w-2 h-2 rounded-full bg-secondary" />
-              <span className="text-sm">Google Cloud Professional Developer</span>
+              <span className="text-sm">Google Professional Cloud Architect</span>
             </div>
             <div className="flex items-center gap-3">
               <div className="w-2 h-2 rounded-full bg-accent" />
-              <span className="text-sm">Microsoft Azure AI Fundamentals</span>
+              <span className="text-sm">Microsoft Azure AI Engineer</span>
             </div>
             <div className="flex items-center gap-3">
               <div className="w-2 h-2 rounded-full bg-primary" />
-              <span className="text-sm">Meta React Advanced Certification</span>
+              <span className="text-sm">Project Management Professional</span>
             </div>
           </div>
         </div>

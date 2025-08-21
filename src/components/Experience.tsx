@@ -2,9 +2,9 @@ const experiences = [
   {
     period: "2024 — Present",
     title: "Water Hashira Level",
-    position: "Senior Software Engineer",
+    position: "Solutions Architect",
     company: "ANZ - Knowledgebase & Data Team",
-    description: "Leading 15 engineers across 3 cross-functional teams building advanced multi-agent chatbot systems leveraging GPT-4, Claude, LangChain, and Pinecone. Architecting enterprise-grade AI solutions that process millions of documents daily with the precision of Water Breathing.",
+    description: "Leading 15 engineers across 3 cross-functional teams building advanced multi-agent chatbot systems leveraging GPT-4, Claude, LangChain, and Pinecone. Architecting enterprise-grade AI solutions that process millions of documents daily",
     technologies: [
       "GPT-4", "Claude", "LangChain", "Pinecone", "Python", "AWS", "OpenSearch", "RAG"
     ],
@@ -38,7 +38,7 @@ const experiences = [
     title: "Hinoto Rank",
     position: "Lead Engineer/Co-founder",
     company: "On The Card",
-    description: "Co-founded and led a team of 7 engineers, defining tech roadmap and engineering processes to scale a contactless smart card platform. Mastered the art of handling massive traffic spikes with Water Breathing techniques.",
+    description: "Co-founded and led a team of 7 engineers, defining tech roadmap and engineering processes to scale a contactless smart card platform.",
     technologies: [
       "Node.js", "Firebase", "MongoDB", "React", "CI/CD", "Grafana", "PagerDuty"
     ],
@@ -71,7 +71,7 @@ const experiences = [
     title: "Mizunoto Rank",
     position: "Full Stack Software Engineer",
     company: "Hello Health Group",
-    description: "Revamped healthcare applications serving 120,000+ unique visitors monthly. Developed health tools for diabetes and COVID-19 monitoring with the precision of Water Breathing forms.",
+    description: "Revamped healthcare applications serving 120,000+ unique visitors monthly. Developed health tools for diabetes and COVID-19 monitoring",
     technologies: [
       "React", "Next.js", "NestJS", "Redis", "Webpack", "Styled Components"
     ],
