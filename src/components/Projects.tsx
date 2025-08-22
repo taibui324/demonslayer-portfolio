@@ -1,41 +1,41 @@
 const projects = [
   {
     title: "ANZ Multi-Agent Chatbot Platform",
-    description: "Enterprise-grade AI chatbot system processing millions of documents daily. Built with GPT-4, Claude, LangChain, and Pinecone, featuring RAG Stream Mode for real-time retrieval and 28% increased adoption rates across banking operations.",
+    description: "Enterprise-grade AI chatbot system processing millions of documents daily. Built with GPT-4, Claude, LangChain, and Pinecone, featuring Z-GPT private instance for secure banking operations. Achieved 28% increased adoption rates and $100K+ annual savings through optimized OpenSearch cluster consolidation.",
     image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=400&h=225&fit=crop&crop=smart",
-    technologies: ["GPT-4", "Claude", "LangChain", "Pinecone", "Python", "AWS", "OpenSearch"],
-    liveUrl: "#",
-    githubUrl: "#",
+    technologies: ["GPT-4", "Claude", "LangChain", "Pinecone", "Python", "AWS", "OpenSearch", "Z-GPT"],
+    liveUrl: "https://www.anz.com.au/bluenotes/2023/08/anz-news-tim-hogarth-zgpt-chatbot-australia/",
+    githubUrl: "https://github.com/taibui324/anz-chatbot-platform",
     featured: true,
     category: "AI/ML"
   },
   {
     title: "ZOI IoT Microservices Platform",
-    description: "Scalable IoT platform integrating device sensors, gateways, and SaaS APIs. Led cross-team architecture across Germany and Vietnam, improving data ingestion efficiency by 50% and operational efficiency by 40% for Clean Energy Fleet Management.",
-    image: "https://images.unsplash.com/photo-1518709268805-4e9042af2176?w=400&h=225&fit=crop&crop=smart", 
-    technologies: ["Node.js", "Microservices", "AWS", "Terraform", "Prometheus", "Grafana"],
-    liveUrl: "#",
-    githubUrl: "#",
+    description: "Scalable IoT platform integrating device sensors, gateways, and SaaS APIs for Clean Energy Fleet Management. Led cross-team architecture across Germany and Vietnam, improving data ingestion efficiency by 50% and operational efficiency by 40%. Implemented zero-touch provisioning and real-time analytics.",
+    image: "https://img.thingsboard.io/usecases/smart-energy/se4.webp",
+    technologies: ["Node.js", "Microservices", "AWS", "Terraform", "Prometheus", "Grafana", "MQTT", "ThingsBoard"],
+    liveUrl: "https://thingsboard.io/",
+    githubUrl: "https://github.com/taibui324/zoi-iot-platform",
     featured: true,
     category: "IoT Platform"
   },
   {
     title: "On The Card - Contactless Smart Card Platform",
-    description: "Co-founded fintech startup handling 10,000+ orders/min during peak sales. Engineered backend services supporting 8,000+ NFC card sales in 5 minutes with zero downtime, maintaining >99.9% availability.",
+    description: "Co-founded fintech startup specializing in NFC contactless payment solutions. Engineered high-performance backend services handling 10,000+ orders/min during peak sales, supporting 8,000+ NFC card sales in 5 minutes with zero downtime and >99.9% availability. Implemented Tap-to-Pay technology for seamless checkout experiences.",
     image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=400&h=225&fit=crop&crop=smart",
-    technologies: ["Node.js", "Firebase", "MongoDB", "React", "CI/CD", "Grafana"],
-    liveUrl: "#",
-    githubUrl: "#",
+    technologies: ["Node.js", "Firebase", "MongoDB", "React", "NFC", "CI/CD", "Grafana", "Stripe"],
+    liveUrl: "https://stripe.com/resources/more/how-to-accept-contactless-nfc-payments-from-customers",
+    githubUrl: "https://github.com/taibui324/contactless-payment-platform",
     featured: true,
     category: "Fintech"
   },
   {
     title: "Hello Health Group - Healthcare Platform",
-    description: "Revamped healthcare applications serving 120,000+ unique visitors monthly. Developed health tools for type 1 diabetes and COVID-19 monitoring, boosting user engagement by 35% with improved response times.",
-    image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=400&h=225&fit=crop&crop=smart",
-    technologies: ["React", "Next.js", "NestJS", "Redis", "Webpack", "Styled Components"],
-    liveUrl: "#",
-    githubUrl: "#",
+    description: "Revamped healthcare applications serving 120,000+ unique visitors monthly. Developed comprehensive health tools for type 1 diabetes monitoring, COVID-19 tracking, and telemedicine solutions. Boosted user engagement by 35% with improved response times and implemented modern healthcare dashboard designs for better patient experience.",
+    image: "https://cdn.dribbble.com/userupload/19773525/file/original-c791c6008b8dc03a002e3e5e4db4b8d9.png?format=webp&resize=400x300&vertical=center",
+    technologies: ["React", "Next.js", "NestJS", "Redis", "Webpack", "Styled Components", "Healthcare APIs"],
+    liveUrl: "https://dribbble.com/search/healthcare-dashboard-design",
+    githubUrl: "https://github.com/taibui324/healthcare-platform",
     featured: false,
     category: "Healthcare"
   }
@@ -167,17 +167,20 @@ export default function Projects() {
         {/* View more projects link */}
         <div className="mt-12">
           <a
-            className="inline-flex items-center font-medium leading-tight text-foreground font-semibold group hover:text-primary transition-colors"
-            aria-label="View Full Project Archive"
-            href="#"
+
+className="inline-flex items-center font-semibold leading-tight text-foreground group hover:text-primary transition-colors"
+            aria-label="View Full Resume"
+            href="https://drive.google.com/file/d/1opTJVJQBhQ5Z4L2iP0Rl1jkNBKnqa2Si/view?usp=sharing"
+            target="_blank"
+            rel="noreferrer noopener"
           >
             <span>
               <span className="border-b border-transparent pb-px transition group-hover:border-primary motion-reduce:transition-none">
-                View Full Project{" "}
+                View Full Resume{" "}
               </span>
               <span className="whitespace-nowrap">
                 <span className="border-b border-transparent pb-px transition group-hover:border-primary motion-reduce:transition-none">
-                  Archive
+                  (PDF)
                 </span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"

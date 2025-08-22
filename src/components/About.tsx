@@ -36,7 +36,7 @@ export default function About() {
             </div>
             {/* Character Name Badge */}
             <div className="absolute -bottom-3 left-1/2 transform -translate-x-1/2 bg-background/90 backdrop-blur-sm border border-secondary/30 rounded-full px-3 py-1 shadow-lg">
-              <span className="text-xs font-semibold text-secondary">水柱 Giyu</span>
+              <span className="text-xs font-semibold text-secondary">Tai Bui</span>
             </div>
           </div>
         </div>

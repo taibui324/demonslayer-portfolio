@@ -22,7 +22,7 @@ export default function Hero() {
             </span>
           </span>
           <span className="block text-xl sm:text-2xl font-medium text-muted mt-2">
-            Water Hashira Developer
+            Tai Bui Developer
           </span>
         </h1>
 

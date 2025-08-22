@@ -13,7 +13,7 @@ const notoSansJP = Noto_Sans_JP({
 });
 
 export const metadata: Metadata = {
-  title: "Demon Slayer Dev | Software & AI Solutions Expert",
+  title: "Tai Bui Dev | Software & AI Solutions Expert",
   description: "Fullstack Software Architect specializing in web development and AI solutions. Building pixel-perfect digital experiences with the power of breathing techniques.",
   keywords: ["Software Developer", "AI Solutions", "Full Stack", "React", "Next.js", "TypeScript", "Web Development"],
   authors: [{ name: "Demon Slayer Dev" }],
