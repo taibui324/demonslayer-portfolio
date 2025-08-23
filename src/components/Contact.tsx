@@ -63,11 +63,7 @@ export default function Contact() {
         {/* Contact intro */}
         <div className="text-center space-y-4">
           <h2 className="text-3xl font-bold text-foreground">
-            Ready to{" "}
-            <span className="flame-gradient bg-clip-text text-transparent">
-              Slay Some Demons
-            </span>
-            ?
+            Ready to build your business?
           </h2>
           <p className="text-muted max-w-2xl mx-auto">
             Whether you need a powerful web application, intelligent AI solution, or want to discuss 
