@@ -14,25 +14,29 @@ export default function Contact() {
       const form = e.currentTarget;
       const formData = new FormData(form);
       
-      // Convert FormData to URLSearchParams
-      const params = new URLSearchParams();
-      for (const [key, value] of formData.entries()) {
-        params.append(key, value.toString());
-      }
+      // Convert FormData to JSON
+      const data = {
+        name: formData.get('name')?.toString() || '',
+        email: formData.get('email')?.toString() || '',
+        project: formData.get('project')?.toString() || '',
+        message: formData.get('message')?.toString() || '',
+      };
       
-      // Submit to Netlify
-      const response = await fetch('/', {
+      // Submit to our API route
+      const response = await fetch('/api/contact', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: params.toString(),
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data),
       });
+      
+      const result = await response.json();
       
       if (response.ok) {
         setSubmitted(true);
         form.reset();
-        setTimeout(() => setSubmitted(false), 3000);
+        setTimeout(() => setSubmitted(false), 5000);
       } else {
-        throw new Error('Form submission failed');
+        throw new Error(result.error || 'Form submission failed');
       }
     } catch (error) {
       console.error('Form submission error:', error);
@@ -81,19 +85,7 @@ export default function Contact() {
             <form 
               onSubmit={handleSubmit} 
               className="space-y-4"
-              name="contact"
-              method="POST"
-              data-netlify="true"
-              netlify-honeypot="bot-field"
             >
-              {/* Hidden field for Netlify Forms */}
-              <input type="hidden" name="form-name" value="contact" />
-              {/* Honeypot field for spam protection */}
-              <div style={{ display: 'none' }}>
-                <label>
-                  Don&apos;t fill this out if you&apos;re human: <input name="bot-field" />
-                </label>
-              </div>
               <div className="space-y-2">
                 <label htmlFor="name" className="text-sm font-medium text-foreground">
                   Name
