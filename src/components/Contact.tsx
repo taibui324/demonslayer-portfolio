@@ -10,12 +10,36 @@ export default function Contact() {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulate form submission
-    setTimeout(() => {
+    try {
+      const form = e.currentTarget;
+      const formData = new FormData(form);
+      
+      // Convert FormData to URLSearchParams
+      const params = new URLSearchParams();
+      for (const [key, value] of formData.entries()) {
+        params.append(key, value.toString());
+      }
+      
+      // Submit to Netlify
+      const response = await fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: params.toString(),
+      });
+      
+      if (response.ok) {
+        setSubmitted(true);
+        form.reset();
+        setTimeout(() => setSubmitted(false), 3000);
+      } else {
+        throw new Error('Form submission failed');
+      }
+    } catch (error) {
+      console.error('Form submission error:', error);
+      alert('⚡ Thunder Breathing failed! Please try again or contact me directly via email.');
+    } finally {
       setIsSubmitting(false);
-      setSubmitted(true);
-      setTimeout(() => setSubmitted(false), 3000);
-    }, 2000);
+    }
   };
 
   return (
@@ -54,7 +78,22 @@ export default function Contact() {
               Send a Mission Request
             </h3>
             
-            <form onSubmit={handleSubmit} className="space-y-4">
+            <form 
+              onSubmit={handleSubmit} 
+              className="space-y-4"
+              name="contact"
+              method="POST"
+              data-netlify="true"
+              netlify-honeypot="bot-field"
+            >
+              {/* Hidden field for Netlify Forms */}
+              <input type="hidden" name="form-name" value="contact" />
+              {/* Honeypot field for spam protection */}
+              <div style={{ display: 'none' }}>
+                <label>
+                  Don&apos;t fill this out if you&apos;re human: <input name="bot-field" />
+                </label>
+              </div>
               <div className="space-y-2">
                 <label htmlFor="name" className="text-sm font-medium text-foreground">
                   Name
@@ -119,7 +158,8 @@ export default function Contact() {
               <button
                 type="submit"
                 disabled={isSubmitting || submitted}
-                className={`w-full px-6 py-3 rounded-lg font-medium transition-all ${
+                aria-describedby={isSubmitting ? "submitting-status" : submitted ? "success-status" : undefined}
+                className={`w-full px-6 py-3 rounded-lg font-medium transition-all focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-background ${
                   submitted
                     ? "bg-green-500 text-white"
                     : isSubmitting

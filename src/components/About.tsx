@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 export default function About() {
   return (
     <section 
@@ -17,11 +19,13 @@ export default function About() {
         <div className="flex justify-center lg:justify-start mb-6 lg:mb-0">
           <div className="relative group">
             <div className="w-32 h-32 lg:w-40 lg:h-40 rounded-full overflow-hidden border-4 border-secondary/30 shadow-2xl shadow-secondary/20 transition-all duration-500 group-hover:border-secondary/60 group-hover:shadow-secondary/40 group-hover:scale-105 animate-breathingGlow">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img 
+              <Image 
                 src="https://static.wikia.nocookie.net/kimetsu-no-yaiba/images/a/a2/Giyu_profile.png"
                 alt="Giyu Tomioka - Water Hashira" 
+                width={160}
+                height={160}
                 className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-110"
+                priority
               />
               {/* Water Breathing Effect Overlay */}
               <div className="absolute inset-0 bg-gradient-to-t from-secondary/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />

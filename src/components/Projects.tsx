@@ -41,6 +41,8 @@ const projects = [
   }
 ];
 
+import Image from 'next/image';
+
 const categoryColors = {
   "AI/ML": "from-purple-400 to-indigo-500",
   "IoT Platform": "from-green-400 to-emerald-500",
@@ -72,10 +74,18 @@ export default function Projects() {
                 {/* Project image */}
                 <div className="sm:col-span-2 sm:order-1">
                   <div className="relative overflow-hidden rounded border-2 border-border transition-all group-hover:border-primary/50 aspect-video">
-                    {/* Placeholder image with gradient */}
-                    <div className={`absolute inset-0 bg-gradient-to-br ${categoryColors[project.category as keyof typeof categoryColors]} opacity-80`} />
+                    {/* Project image */}
+                    <Image
+                      src={project.image}
+                      alt={`${project.title} - ${project.category} project screenshot`}
+                      width={400}
+                      height={225}
+                      className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                    />
+                    {/* Gradient overlay */}
+                    <div className={`absolute inset-0 bg-gradient-to-br ${categoryColors[project.category as keyof typeof categoryColors]} opacity-60 group-hover:opacity-40 transition-opacity`} />
                     <div className="absolute inset-0 flex items-center justify-center">
-                      <span className="text-white font-bold text-sm">{project.category}</span>
+                      <span className="text-white font-bold text-sm bg-black/30 px-2 py-1 rounded">{project.category}</span>
                     </div>
                     
                     {/* Sword slash animation overlay */}
