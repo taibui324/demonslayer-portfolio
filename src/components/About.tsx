@@ -39,8 +39,8 @@ export default function About() {
               <div className="absolute bottom-2 right-2 w-1 h-1 bg-secondary/60 rounded-full animate-ping animation-delay-700" />
             </div>
             {/* Character Name Badge */}
-            <div className="absolute -bottom-3 left-1/2 transform -translate-x-1/2 bg-background/90 backdrop-blur-sm border border-secondary/30 rounded-full px-3 py-1 shadow-lg">
-              <span className="text-xs font-semibold text-secondary">Tai Bui</span>
+            <div className="absolute -bottom-3 left-1/2 transform -translate-x-1/2 bg-background/90 backdrop-blur-sm border border-secondary/30 rounded-full px-3 py-1 shadow-lg sm:px-4 sm:py-1.5">
+              <span className="text-xs font-semibold text-secondary sm:text-sm">Tai Bui</span>
             </div>
           </div>
         </div>

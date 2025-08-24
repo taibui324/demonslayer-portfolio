@@ -40,7 +40,7 @@ export default function BackgroundMusic() {
   };
 
   return (
-    <div className="fixed bottom-4 right-4 z-50">
+    <div className="fixed bottom-4 right-4 z-50 lg:bottom-4 lg:right-4 sm:bottom-20 sm:right-4">
       {/* Music control button */}
       <button
         onClick={() => setShowControls(!showControls)}

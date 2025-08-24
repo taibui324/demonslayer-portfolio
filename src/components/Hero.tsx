@@ -43,8 +43,7 @@ export default function Hero() {
         {/* Description */}
         <p className="mt-4 max-w-xs leading-normal text-muted">
           I architect <span className="text-secondary font-medium">scalable AI solutions</span> that 
-          flow through <span className="text-primary font-medium">enterprise systems</span> with the 
-          <span className="text-accent font-medium">precision of Water Breathing</span>.
+          flow through <span className="text-primary font-medium">enterprise systems</span>
         </p>
 
         {/* Breathing technique specialties */}
